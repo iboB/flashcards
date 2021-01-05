@@ -1,0 +1,48 @@
+body {
+	font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+section {
+	display: flex;
+	align-items: center;
+}
+
+.page {
+	margin: 0;
+	overflow: hidden;
+	position: relative;
+	box-sizing: border-box;
+	page-break-after: always;
+}
+
+/** Page sizes **/
+body.A3     .page { width: 420mm; height: 296mm }
+body.A4     .page { width: 297mm; height: 209mm }
+body.A5     .page { width: 210mm; height: 147mm }
+body.letter .page { width: 280mm; height: 215mm }
+body.legal  .page { width: 357mm; height: 215mm }
+
+/** Paddings **/
+.page.padding-10mm { padding: 10mm }
+.page.padding-15mm { padding: 15mm }
+.page.padding-20mm { padding: 20mm }
+.page.padding-25mm { padding: 25mm }
+
+/** For screen preview **/
+@media screen {
+	body { background: grey; }
+	.page {
+		background: white;
+		box-shadow: 0 0 0.5cm rgba(0,0,0,0.5);
+		margin: 5mm auto;
+	}
+}
+
+/** Adjust for Chrome issue #273306 **/
+@media print {
+	body.A3 { width: 420mm }
+	body.A4 { width: 297mm }
+	body.A5 { width: 210mm }
+	body.letter { width: 280mm }
+	body.legal  { width: 357mm }
+}
