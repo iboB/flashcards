@@ -5,21 +5,19 @@
     <title>One Word Pages</title>
     <link rel="stylesheet" href="style.css">
 </head>
-<body class="A4">
-    <div id="preview"></div>
+<body class="preview A4 padding-15mm">
     <script>
         const words = ['horse', 'ophtalmology', 'A'];
-        const preview = document.getElementById('preview');
+        const body = document.body;
         for (const w of words) {
             let sec = document.createElement('section');
             sec.classList.add('page');
-            sec.classList.add('padding-15mm');
 
             let art = document.createElement('article');
             art.innerText = w;
 
             sec.appendChild(art);
-            preview.appendChild(sec);
+            body.appendChild(sec);
 
             const parentContainerWidth = art.parentNode.clientWidth - 130;
             const currentTextWidth = art.scrollWidth;

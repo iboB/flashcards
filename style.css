@@ -1,13 +1,13 @@
-body {
+body.preview {
 	font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 
-section {
+body.preview section {
 	display: flex;
 	align-items: center;
 }
 
-.page {
+body.preview .page {
 	margin: 0;
 	overflow: hidden;
 	position: relative;
@@ -16,22 +16,22 @@ section {
 }
 
 /** Page sizes **/
-body.A3     .page { width: 420mm; height: 296mm }
-body.A4     .page { width: 297mm; height: 209mm }
-body.A5     .page { width: 210mm; height: 147mm }
-body.letter .page { width: 280mm; height: 215mm }
-body.legal  .page { width: 357mm; height: 215mm }
+body.preview.A3     .page { width: 420mm; height: 296mm }
+body.preview.A4     .page { width: 297mm; height: 209mm }
+body.preview.A5     .page { width: 210mm; height: 147mm }
+body.preview.letter .page { width: 280mm; height: 215mm }
+body.preview.legal  .page { width: 357mm; height: 215mm }
 
 /** Paddings **/
-.page.padding-10mm { padding: 10mm }
-.page.padding-15mm { padding: 15mm }
-.page.padding-20mm { padding: 20mm }
-.page.padding-25mm { padding: 25mm }
+body.preview.padding-10mm .page { padding: 10mm }
+body.preview.padding-15mm .page { padding: 15mm }
+body.preview.padding-20mm .page { padding: 20mm }
+body.preview.padding-25mm .page { padding: 25mm }
 
 /** For screen preview **/
 @media screen {
-	body { background: grey; }
-	.page {
+	body.preview { background: grey; }
+	body.preview .page {
 		background: white;
 		box-shadow: 0 0 0.5cm rgba(0,0,0,0.5);
 		margin: 5mm auto;
