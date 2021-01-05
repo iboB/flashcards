@@ -15,6 +15,11 @@ body.preview .page {
 	page-break-after: always;
 }
 
+body.preview .word {
+	width: 100%;
+	height: 100%;
+}
+
 /** Page sizes **/
 body.preview.A3     .page { width: 420mm; height: 296mm }
 body.preview.A4     .page { width: 297mm; height: 209mm }
