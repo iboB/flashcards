@@ -1,10 +1,8 @@
-body.preview {
-	font-family: Verdana, Geneva, Tahoma, sans-serif;
-}
+@page { margin: 0; }
 
-body.preview section {
-	display: flex;
-	align-items: center;
+body.preview {
+	margin: 0;
+	font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 
 body.preview .page {
@@ -45,9 +43,9 @@ body.preview.padding-25mm .page { padding: 25mm }
 
 /** Adjust for Chrome issue #273306 **/
 @media print {
-	body.A3 { width: 420mm }
-	body.A4 { width: 297mm }
-	body.A5 { width: 210mm }
-	body.letter { width: 280mm }
-	body.legal  { width: 357mm }
+	body.preview.A3 { width: 420mm }
+	body.preview.A4 { width: 297mm }
+	body.preview.A5 { width: 210mm }
+	body.preview.letter { width: 280mm }
+	body.preview.legal  { width: 357mm }
 }
