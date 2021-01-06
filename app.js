@@ -39,6 +39,8 @@ this.initializeApp = (appContainerId, cardsContainerId) => {
 
     let buildCards = (words) => {
         const SVGNS = "http://www.w3.org/2000/svg";
+        window.location.href = '#';
+        cardsContainer.innerHTML = ''; // clear previous values if any
         for (const word of words) {
             let page = document.createElement('section');
             page.classList.add('page');
@@ -61,6 +63,25 @@ this.initializeApp = (appContainerId, cardsContainerId) => {
         }
     };
 
-    const words = ['horse', 'ophtalmology', 'A'];
-    buildCards(words);
+    let selectedFile = null;
+    const fileSelector = document.getElementById('file-selector');
+    fileSelector.addEventListener('change', event => {
+        selectedFile = event.target.files[0];
+    });
+
+    const buildButton = document.getElementById('build-cards');
+    buildButton.addEventListener('click', _ => {
+        if (!selectedFile) {
+            alert('No file was selected');
+            return;
+        }
+
+        const reader = new FileReader();
+        reader.addEventListener('load', event => {
+            const text = event.target.result;
+            let words = text.split(/\r?\n/);
+            buildCards(words);
+        });
+        reader.readAsText(selectedFile);
+    });
 };

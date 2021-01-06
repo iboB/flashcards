@@ -7,10 +7,28 @@
     <meta name="description" content="Flashcards builder">
     <meta name="author" content="Borislav Stanimirov">
 
+    <link rel="stylesheet" href="app.css">
     <link rel="stylesheet" href="cards.css">
 </head>
 <body>
-    <div id="app-container"></div>
+    <div class="main" id="app-container">
+        <h1>Flashcards</h1>
+        <p><strong>Usage:</strong></p>
+        <ol>
+            <li>Choose text file with words. One word per line</li>
+            <li>Click build</li>
+            <li>Print result to printer of pdf</li>
+        </ol>
+        <div class="choose-file">
+            <input type="file" id="file-selector">
+        </div>
+        <div class="build">
+            <input type="button" id="build-cards" value="Build">
+        </div>
+        <div class="footer">
+            <small>Copyright &copy; 2020 Borislav Stanimirov</small>
+        </div>
+    </div>
     <div id="cards-preview"></div>
     <script src="./app.js"></script>
     <script>

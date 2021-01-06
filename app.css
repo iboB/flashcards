@@ -1,0 +1,27 @@
+body.app {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    background: lightgrey;
+    margin: 0;
+}
+
+body.app .main {
+    background: white;
+    width: 500px;
+    padding: 20px;
+    margin: 0 auto;
+}
+
+body.app .choose-file {
+    margin-top: 30px;
+    text-align: center;
+}
+
+body.app .build {
+    margin-top: 30px;
+    text-align: center;
+}
+
+body.app .footer {
+    margin-top: 50px;
+    text-align: center;
+}
