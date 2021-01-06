@@ -2,33 +2,16 @@
 <html lang="en">
 <head>
     <meta charset="utf-8">
-    <title>One Word Pages</title>
-    <link rel="stylesheet" href="style.css">
+    <title>Flashcards</title>
+    <link rel="stylesheet" href="cards.css">
 </head>
-<body class="preview A4 padding-15mm">
+<body>
+    <div id='app'></div>
+    <div id='cards-preview'></div>
+    <script src="./flashcards-builder.js"></script>
     <script>
-        const SVGNS = "http://www.w3.org/2000/svg";
         const words = ['horse', 'ophtalmology', 'A'];
-        const body = document.body;
-        for (const w of words) {
-            let sec = document.createElement('section');
-            sec.classList.add('page');
-
-            let svg = document.createElementNS(SVGNS, "svg");
-            svg.classList.add('word');
-
-            let text = document.createElementNS(SVGNS, "text");
-            text.innerHTML = w;
-
-            svg.appendChild(text);
-            sec.appendChild(svg);
-            body.appendChild(sec);
-
-            const bbox = svg.getBBox();
-            svg.setAttribute("width", bbox.width);
-            svg.setAttribute("height", bbox.height);
-            svg.setAttribute("viewBox", `${bbox.x} ${bbox.y} ${bbox.width} ${bbox.height}`);
-        }
+        buildFlashcards(words, 'cards-preview', 'A4', 'padding-15mm');
     </script>
 </body>
 </html>
