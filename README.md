@@ -1,6 +1,6 @@
 # Flashcards
 
-A generator of flashcards. You can see it in action [here](https://ibob.github.io/flashcards).
+A generator of flashcards. You can see it in action [here](https://ibob.github.io/flashcards/).
 
 ## License
 
