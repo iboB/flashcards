@@ -2,9 +2,22 @@
 
 body.cards {
 	margin: 0;
-	font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 
+/*
+	Intentionally don't match with body.cards here.
+	Thus the svg bounding box will produce the same results no matter what the
+	styles of the parent containers are.
+*/
+.page .word {
+	font-family: Verdana, Geneva, Tahoma, sans-serif;
+	font-size: 16px;
+}
+
+/*
+	Print-styles used from Paper CSS: https://github.com/cognitom/paper-css
+	We can't use paper css as it is, as we need the padding in the body style
+*/
 body.cards .page {
 	margin: 0;
 	overflow: hidden;

@@ -10,12 +10,11 @@
     <link rel="stylesheet" href="cards.css">
 </head>
 <body>
-    <div id='app-container'></div>
-    <div id='cards-preview'></div>
-    <script src="./flashcards-builder.js"></script>
+    <div id="app-container"></div>
+    <div id="cards-preview"></div>
+    <script src="./app.js"></script>
     <script>
-        const words = ['horse', 'ophtalmology', 'A'];
-        buildFlashcards(words, 'cards-preview', 'A4', 'padding-15mm');
+        initializeApp('app-container', 'cards-preview');
     </script>
 </body>
 </html>
